@@ -1,0 +1,14 @@
+﻿@page
+@using Server.Pages
+@model CreateAvionModel
+@{
+    ViewData["Title"] = "Kreiraj avion";
+    Layout = "_Layout";
+}
+<form method="post">
+    @Html.AntiForgeryToken()
+    <p>Naziv: <input type="text" name="Avion.Naziv" placeholder="Naziv"></p>
+    <p>X: <input type="number" name="Avion.X" placeholder="X"></p>
+    <p>Y: <input type="number" name="Avion.Y" placeholder="Y"></p>
+    <input type="submit" value="Kreiraj">
+</form>

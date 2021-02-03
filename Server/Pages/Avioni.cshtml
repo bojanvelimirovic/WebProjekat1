@@ -1,0 +1,33 @@
+﻿@page
+@using Server.Pages
+@model AvioniModel
+@{
+    ViewData["Title"] = "Lista aviona";
+    Layout = "_Layout";
+}
+@section Styles {
+    <link rel="stylesheet" href="Styles/Style.css">
+}
+<a class="novi" href="./CreateAvion">Kreiraj novi avion</a>
+
+<table>
+    <tr>
+        <th>Avion</th>
+        
+        <th>X</th>
+        <th>Y</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var v in Model.Avioni)
+    {
+        <tr>
+            <td>@v.Naziv</td>
+          
+            <td>@v.X</td>
+            <td>@v.Y</td>
+            <td><a href="UpdateAvion?id=@v.ID">Edit</a></td>
+            <td><a href="DeleteAvion?id=@v.ID">Delete</a></td>
+        </tr>
+    }
+</table>

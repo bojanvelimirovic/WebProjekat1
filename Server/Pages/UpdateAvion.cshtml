@@ -1,0 +1,16 @@
+﻿@page
+@using Server.Pages
+@model UpdateAvionModel
+@{
+    ViewData["Title"] = "Izmena podataka o avionu";
+    Layout = "_Layout";
+}
+<h1>Izmena: @Model.Avion.Naziv</h1>
+<form method="post">
+    @Html.AntiForgeryToken()
+    <p>Naziv: <input type="text" name="Avion.Naziv" placeholder="@Model.Avion.Naziv"></p>
+    <p>Kapacitet: <input type="number" name="Avion.Kapacitet" placeholder="@Model.Avion.Kapacitet"></p>
+    <p>X: <input type="number" name="Avion.X" placeholder="@Model.Avion.X"></p>
+    <p>Y: <input type="number" name="Avion.Y" placeholder="@Model.Avion.Y"></p>
+    <input type="submit" value="Izmeni">
+</form>

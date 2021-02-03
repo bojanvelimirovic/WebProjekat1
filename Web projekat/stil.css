@@ -1,0 +1,50 @@
+body{
+    background: rgb(0,212,255);
+    background: linear-gradient(184deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 34%, rgba(9,9,121,1) 61%, rgba(0,212,255,1) 100%);
+}
+
+.forma{
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border:3px solid black;
+}
+
+
+.kontejner{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.text{
+    font-size: larger;
+    text-align: center;
+}
+
+.kontSedista{
+    display: flex;
+    flex-grow: 1 ;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.vrsta{
+    display: flex;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.lok{
+    border: 3px solid black;
+    flex: 1 1 3px;
+    max-width: 100px;
+    height: 70px;
+    text-align:center;
+    border-radius: 15px 15px 15px 15px;
+    margin: 10px;
+}
+
+
